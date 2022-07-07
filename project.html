@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>projects - Abdinasir-Abdullahi</title>
+</head>
+<body>
+    
+    <div id="main-conts">
+<style>
+/* parent */
+.nav{
+    position: relative;
+    width: 100%;
+}
+
+/* navber */
+.nav #navber{
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background: rgba(7, 3, 49, 0.4);
+    padding: 10px;
+    align-items: center;
+}
+/* logoi */
+.nav #navber .logo{
+    padding: 2px;
+    font-size: 20Spx;
+    color: white;
+}
+
+/* nav */
+.nav #navber ul{
+    display: flex;
+    position: absolute;
+    right: 30px;
+    align-items: center;
+    list-style: none;
+}
+
+.nav #navber ul li{
+    padding: 10px;
+    cursor: pointer;
+}
+.nav #navber ul li:hover{
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+.nav #navber ul li a{
+    text-decoration: none;
+    color: rgb(236, 226, 208);
+}
+/*  */
+
+.open-nav,.close-nav{
+    display: none;
+}
+#main-conts{
+    transition: 2s all ease;
+}
+/* phone menu */
+
+@media (max-width: 700px){
+    
+    .nav #navber{
+        display: flex;
+        position: fixed;
+    }
+    .nav #navber #u-navi{
+        display: block;
+        width: 200px;
+        /* background: rgb(7, 3, 49); */
+        position: fixed;
+        right: -200px;
+        height: 100vh;
+        top: 50px;
+        transition: 1.5s all ease-in-out;
+        text-align: center;
+        line-height: 2;
+    }
+    
+    .nav #navber #u-navi li{
+        border-bottom: 1px solid #ccc;
+    }
+    .nav #navber #u-navi li:hover{
+        transition: 2s all ease;
+        background: rgba(235, 235, 235, 0.404);
+    }
+    /* .nav #navber ul li a{
+    text-decoration: none;
+    color: black;
+} */
+
+    
+    .open-nav,.close-nav{
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.041);
+        border-radius: 1px;
+        cursor: pointer;
+        padding: 8px;
+        width: 50px;
+        height: 40px;
+        line-height: 0.5;
+        border: none;
+        outline: none;
+        position: fixed;
+        right: 10px;
+        top: 6px;
+        z-index: 3;
+    }
+    .open-nav div{
+        margin-top: 6px;
+    }
+    .open-nav div:nth-child(1){
+        width: 100%;
+        height: 8px;
+        background: rgb(255, 255, 255);
+    }
+    .open-nav div:nth-child(2){
+        width: 85%;
+        height: 5px;
+        background: rgb(251, 251, 251);
+    }
+    .open-nav div:nth-child(3){
+        width: 50%;
+        height: 8px;
+        background: rgb(148, 148, 148);
+    }
+
+    
+}
+
+
+</style>
+ 
+ <div class="nav">
+        <!-- nav -->
+        <button class="open-nav" id="navi" onclick="openmenu()" >
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+
+        <nav id="navber">
+
+            <header class="logo">
+                <h1>Abdinasir Abbdullahi</h1>
+            </header>
+            <ul id="u-navi">
+                <!-- <li><a href="">Home</a></li> -->
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <!-- <li><a href="">Blog</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<style>
+    .project-content{
+    width: 100%;
+    height: 100%;
+    background-image: url(imgs/1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.project-content h1{
+    padding: 10px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+.projects{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.project-1{
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);   
+    width: 350px;
+    background: rgb(250, 250, 250, 0.06);
+    border-radius: 5px;
+}
+.project-1 h1{
+    font-size: 25px;
+    border-bottom: 1px solid #000;
+    /* color: rgb(90, 90, 90); */
+}
+.project-1 img{
+    width: 100%;
+    border-radius:10px;
+}
+
+
+
+</style>
+
+    
+    <!-- projects i have -->
+
+    <div class="project-content">
+        <div id="p-projects" style="margin-top: 50px; padding: 10px;"></div>
+
+        <h1>Projects</h1>
+        <div class="projects" >
+
+            <div class="project-1">
+                <div class="cinwaan">
+                    <h1>Contact - Form</h1>
+                </div>
+                <div class="jirka">
+                    <img src="imgs/contact.jpeg" alt="">
+                </div>
+                <!-- <div class="icons">
+                    <a href="https://github.com/Abdinasir-Abdullahi/"><img src="icons/github.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/abdinasir-abdullahi-036904225/"><img src="icons/linkedin-logo.png" alt=""></a>
+                    <a href="https://www.instagram.com/risaanlove"><img src="icons/instagram logo.png" alt=""></a>
+                    <a href="https://www.facebook.com/risaanlove"><img src="icons/facebook.png" alt=""></a>
+                    <a href="https://www.twitter.com/risaanlove">Live-View</a>
+                
+                </div> -->
+            </div>
+            <div class="project-1">
+                <div class="cinwaan">
+                    <h1>Registration - Form</h1>
+                </div>
+                <div class="jirka">
+                    <img src="imgs/register.jpeg" alt="">
+                </div>
+                <!-- <div class="icons">
+                    <a href="https://github.com/Abdinasir-Abdullahi/"><img src="icons/github.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/abdinasir-abdullahi-036904225/"><img src="icons/linkedin-logo.png" alt=""></a>
+                    <a href="https://www.instagram.com/risaanlove"><img src="icons/instagram logo.png" alt=""></a>
+                    <a href="https://www.facebook.com/risaanlove"><img src="icons/facebook.png" alt=""></a>
+                    <a href="https://www.twitter.com/risaanlove">Live-view</a>
+                
+                </div> -->
+            </div>
+            <div class="project-1">
+                <div class="cinwaan">
+                    <h1>Calculator</h1>
+                </div>
+                <div class="jirka">
+                    <img src="imgs/calculator.jpeg" alt="">
+                </div>
+                <!-- <div class="icons">
+                    <a href="https://github.com/Abdinasir-Abdullahi/"><img src="icons/github.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/abdinasir-abdullahi-036904225/"><img src="icons/linkedin-logo.png" alt=""></a>
+                    <a href="https://www.instagram.com/risaanlove"><img src="icons/instagram logo.png" alt=""></a>
+                    <a href="https://www.facebook.com/risaanlove"><img src="icons/facebook.png" alt=""></a>
+                    <a href="https://www.twitter.com/risaanlove">Live-Veiw</a>
+                
+                </div> -->
+            </div>
+        </div>
+    <!-- footer -->
+    <div class="footer">
+        <p style="color: white; text-align: center;padding: 10px;">&copy; Righserve 2022 || Designed by Abdinasir Abdullahi  </p>
+    <!-- <div class="icons">
+            <a href="https://github.com/Abdinasir-Abdullahi/"><img src="icons/github.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/abdinasir-abdullahi-036904225/"><img src="icons/linkedin-logo.png" alt=""></a>
+            <a href="https://www.instagram.com/risaanlove"><img src="icons/instagram logo.png" alt=""></a>
+            <a href="https://www.facebook.com/risaanlove"><img src="icons/facebook.png" alt=""></a>
+            <a href="https://www.twitter.com/risaanlove"><img src="icons/twitter1.jpg" alt=""></a>
+        </div>     -->
+    </div>
+
+    </div>
+
+</div> 
+    
+<!-- script -->
+<script src="app.js"></script>
+</body>
+</html>
